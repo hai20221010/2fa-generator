@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2FA Code Generator</title>
+</head>
+<body>
+    <h1>2FA Code Generator</h1>
+    <form method="post" action="/generate">
+        <label for="secret">Secret Key:</label>
+        <input type="text" id="secret" name="secret" required>
+        <button type="submit">Generate Code</button>
+    </form>
+    {% if code %}
+        <h2>Your 2FA Code: {{ code }}</h2>
+    {% endif %}
+</body>
+</html>
